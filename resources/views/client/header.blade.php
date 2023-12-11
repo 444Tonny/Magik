@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="logo">
-            <div class='logo_container' onclick="window.location.href=window.location.origin + '/FortniteShop/www.magiktienda.com/'">
+            <div class='logo_container' onclick="window.location.href=window.location.origin + '/'">
                 <img class='logo_image' alt='Magik Tienda' width='80' src="{{ asset('img/logo.png') }}">
                 <h1 class='logo_text'>MAGIK TIENDA</h1>
             </div>
@@ -110,7 +110,7 @@
                         });
                     } else {
                         // Si l'élément cible n'est pas trouvé, ouvrir l'autre page
-                        window.location.href = window.location.origin + '/FortniteShop/www.magiktienda.com/#' + targetId;
+                        window.location.href = window.location.origin + '/#' + targetId;
                     }
                 });
             });
