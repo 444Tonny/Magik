@@ -1,0 +1,26 @@
+1- Liste commande admin
+2- Fiche commande adimin
+3- Changement de status et suppression
+5- Premios produits
+6- Login administrateur
+7- Routage auth
+
+
+4- Actualisation du stock - Achat, Cancel (admin)
+8- Integration logo et puntos
+9- Icones produits
+
+
+// Autres
+
+Redeem de code user
+Login Gmail
+Synchronisation puntos
+
+
+
+traduction
+- Messages pas assez de puntos
+- Message pas de stock
+
+securrité input

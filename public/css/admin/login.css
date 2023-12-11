@@ -1,0 +1,186 @@
+
+/* LOGIN and CREDENTIALS FORM */
+
+.content {
+    width: 100%;
+}
+
+.content,
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.login {
+    width: 55%;
+    max-width: 450px;
+    min-width: 300px;
+    box-shadow: 0px 0px 5px 2px #d9d9d9;
+    padding: 50px 20px;
+}
+
+.login .logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.message {
+    color: #cd0f45;
+    border: 1px solid #edc4cc;
+    width: 275px;
+    padding: 12px 15px;
+    background: #ffd7d7;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.message-page
+{
+    color: #cd0f45;
+    border: 1px solid #edc4cc;
+    padding: 12px 15px;
+    background: #ffd7d7;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.msgerror
+{
+    color: #cd0f45;
+    border: 1px solid #edc4cc;
+    background: #ffd7d7;
+}
+
+.msgsuccess
+{
+    color: #248e33;
+    border: 1px solid #43e98e;
+    background: #acffba;
+}
+
+.login label {
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+.login input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 9px;
+    font-size: 16px;
+    height: 38px;
+    width: 85%;
+    max-width: 280px;
+    border: 1px solid rgb(182, 177, 175);
+    color: #555555;
+    border-radius: 3px;
+}
+
+
+.login button {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    background-color: #DF1A56;
+    border-radius: 3px;
+    color: white;
+    height: 46px;
+    width: 120px;
+    border: none;
+    font-size: 14px;
+}
+
+
+.login button:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #b41f4c;
+}
+
+/* ------------------ Login end ------------------ */
+
+
+/* ------------------ Credentials ------------------ */
+
+form#credentials {
+    padding-left: 5%;
+    margin-bottom: px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+form#credentials p,
+form#credentials input,
+form#credentials label,
+form#credentials button {
+    max-width: 400px;
+}
+
+.inputcredentials {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    height: 34px;
+    width: 240px;
+}
+
+.labcredentials {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+form#credentials p {
+    margin-top: 5px;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+.btncredentials {
+    margin-top: 35px;
+    height: 44px;
+    width: 110px;
+    background-color: #DF1A56;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.btncredentials:hover,
+.btncredentials:active {
+    transition: 0.2s;
+    background-color: #a31d45;
+    cursor: pointer;
+}
+
+.message-success,
+.message-error {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    padding: 12px 15px;
+    border-radius: 2px;
+}
+
+.message-success {
+    color: green;
+    border: 1px solid #c2e1be;
+    background: #cffecf;
+}
+
+.message-error {
+    color: rgb(166, 23, 68);
+    border: rgb(242, 95, 141) 1px solid;
+    background: #ffb1bc;
+}

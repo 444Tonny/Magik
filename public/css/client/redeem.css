@@ -1,0 +1,63 @@
+.redeem
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 70px;
+	padding-bottom: 60px;
+}
+
+.redeem form
+{
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.redeem .text_redeem
+{
+	color: #ffffff !important;
+	font-size: 14px !important;
+	margin-bottom: 10px;
+	font-weight: 300;
+	text-align: center;
+	font-family: 'Sora', sans-serif;
+}
+
+.redeem input[type='text']
+{
+	margin-bottom: 30px;
+	margin-top: 10px;
+	height: 40px;
+	width: 210px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	color: #5b5b5b;
+}
+
+.reclamar
+{
+	height: 44px;
+	width: 115px;
+	border-radius: 30px;
+	border: none;
+	background: #320a5e;
+	color: white;
+	font-weight: 600;
+	font-size: 12px;
+	box-shadow: 0px 2px 0px 2px #170927;
+	font-family: 'Sora', sans-serif;
+}
+.reclamar:hover,
+.reclamar:active,
+.reclamar:focus
+{
+	cursor: pointer;
+	transition: 0.2s;
+	background: #29094c;
+}

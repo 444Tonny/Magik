@@ -1,0 +1,124 @@
+#codeGeneratorForm
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#codeGeneratorForm select
+{
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 12px;
+
+    width: 280px;
+    height: 45px;
+    color: rgb(53, 53, 53);
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 6px;
+}
+
+#codeGeneratorForm label 
+{
+    font-size: 18px;
+}
+
+label[for="generatedCode"]
+{
+    margin-bottom: 20px;
+}
+
+#codeGeneratorForm #generatedCode
+{
+    box-sizing: border-box;
+    height: 50px;
+    width: 190px;
+
+    margin-right: 10px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Segoe ui', monospace !important;
+    font-weight: 100;
+    border-radius: 3px;
+    border: 1px solid rgb(152, 152, 152);
+    box-shadow: 0px 0px 5px 4px rgb(230, 230, 230);
+    text-align: center;
+}
+
+#generateButton
+{
+    margin-bottom: 50px;
+}
+
+.mt-primary-admin 
+{
+    height: 42px;
+    min-width: 105px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(79, 41, 195);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+}
+
+.mt-primary-admin:hover,
+.mt-primary-admin:focus,
+.mt-primary-admin:active
+{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(58, 9, 131);
+}
+
+#copyButton
+{
+    height: 50px;
+    width: 90px;
+    background-color: rgb(33, 33, 33); 
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+#copyButton:disabled,
+#copyButton:disabled:hover,
+#copyButton:disabled:focus,
+#copyButton:disabled:active
+{
+    cursor:initial !important;
+    background-color: rgb(152, 152, 152);
+    color: rgb(220, 220, 220);
+}
+
+#copyButton:hover,
+#copyButton:focus,
+#copyButton:active
+{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(12, 12, 12);
+}
