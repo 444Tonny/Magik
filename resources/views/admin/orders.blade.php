@@ -105,7 +105,7 @@
                         <p><strong>Status :</strong>
                             <select class="form-control select_status" name='status_order'>
                                 @foreach(['Pending', 'Canceled', 'Confirmed'] as $status)
-                                    <option value="{{ $status }}" {!! $order['status_order'] == $status ? 'selected' : '' !!}>{{ $status }}</option>
+                                    <option value="{{ $status }}" >{{ $status }}</option>
                                 @endforeach
                             </select>
                         </p>
