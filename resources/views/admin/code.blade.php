@@ -57,7 +57,7 @@
             $("#generateButton").click(function () {
                 $.ajax({
                     type: "POST",
-                    url: "/code", // Remplacez cela par l'URL de votre route
+                    url: "/magikadmin/code", // Remplacez cela par l'URL de votre route
                     data: {
                         amount: $("#amountSelect").val(),
                         _token: $('meta[name="csrf-token"]').attr('content')
