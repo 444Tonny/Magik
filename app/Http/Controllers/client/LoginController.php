@@ -54,11 +54,10 @@ class LoginController extends Controller
 
         Auth::loginUsingId($googleId);
 
-        Session::put('google_id', $googleId);
+        Session::put('google_id', ''.$googleId);
         Session::put('givenName', $googleUser->user['given_name']);
         Session::put('points', $currentUser->points);
         Session::put('avatar', $googleUser->user['picture']);
-        dd($googleUser->getEmail());
         Session::put('google_email', $googleUser->getEmail());
 
         Session::save();
