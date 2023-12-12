@@ -112,13 +112,13 @@
                         <!-- Informations du Commandeur -->
                         <h6>Customer Informations :</h6>
                         <div class="form-group">
-                            <p><u>Name:</u> <span id="orderName">Test</span></p>
+                            <p><u>Name:</u> <span id="orderName"></span></p>
                         </div>
                         <div class="form-group">
                             <p><u>Email:</u> <span id="orderEmail"></span></p>
                         </div>
                         <div class="form-group">
-                            <p><u>Fortnite Username:</u> <span id="orderUsername"></span></p>
+                            <p><u>Discord:</u> <span id="orderUsername"></span></p>
                         </div>
                         <div class="form-group">
                             <p><u>Address:</u> <span id="orderAddress"></span></p>

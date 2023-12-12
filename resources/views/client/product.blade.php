@@ -80,7 +80,7 @@
                     <label for="name_order">Nombre completo:</label>
                     <input type="text" name="name_order" required>
 
-                    <label for="username_order">Usuario Fortnite:</label>
+                    <label for="username_order">Discord:</label>
                     <input type="text" name="username_order" >
 
                     <label for="address">Dirección de entrega:</label>
