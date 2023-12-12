@@ -6,7 +6,7 @@
     <title>Orders - Magik Tienda</title>
     <link rel="stylesheet" href="{{ asset('css/admin/admin.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/admin/order.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/order.css?v1') }}">
     <title>Orders</title>
 </head>
 </head>
