@@ -11,9 +11,9 @@ LOG_LEVEL=debug
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=fortnitestore
-DB_USERNAME=root
-DB_PASSWORD=root
+DB_DATABASE=acsywquung
+DB_USERNAME=acsywquung
+DB_PASSWORD=tDyzJd68Rq
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
@@ -54,4 +54,4 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 GOOGLE_CLIENT_ID=834702744925-kdjnv5qud927cevhkkt7h7qt4tj12dqu.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=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
-GOOGLE_REDIRECT=https://b721-142-118-81-20.ngrok-free.app/FortniteShop/www.magiktienda.com/public/auth/callback
+GOOGLE_REDIRECT=https://phplaravel-1181063-4142771.cloudwaysapps.com/auth/callback
