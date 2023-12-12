@@ -67,7 +67,7 @@
     </div>
 
     <div class="products section">
-        <h2>PRODUCTS</h2>
+        <h2>PRODUCTOS</h2>
 
         <!-- Consolas -->
         <div class="products_category first_category" id="consolas">

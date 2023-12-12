@@ -11,7 +11,7 @@
         <div class="top-footer">
             <div class="logo-footer">
                 <img alt='Magik Coins' width='100' src="{{ asset('img/logo.png') }}">
-                <h2 class='h2_footer'>MAGIC TIENDA</h2>
+                <h2 class='h2_footer'>MAGIK TIENDA</h2>
             </div>
             
             <div class="col-footer">

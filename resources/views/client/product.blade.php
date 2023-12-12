@@ -83,7 +83,7 @@
                     <label for="username_order">Usuario Fortnite:</label>
                     <input type="text" name="username_order" >
 
-                    <label for="address">Dirección:</label>
+                    <label for="address">Dirección de entrega:</label>
                     <input type="text" name="address" required>
 
                     <label for="phone">Teléfono:</label>

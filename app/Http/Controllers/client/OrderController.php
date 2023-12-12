@@ -27,7 +27,7 @@ class OrderController extends Controller
         try {
             DB::beginTransaction();
 
-            if(session('google_id')) redirect()->back()->with('error', "Debes iniciar sesión para continuar");
+            if(!session('google_id')) return redirect()->back()->with('error', "Debes iniciar sesión para continuar");
             $currentUser = MagikUser::where('id', session('google_id'))->first();
 
             // Check if codes exists and not used
