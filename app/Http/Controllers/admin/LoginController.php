@@ -63,7 +63,7 @@ class LoginController extends Controller
                 ->withInput();
         }
 
-        $user = MagikUser::where('id_user', '1')->first();
+        $user = MagikUser::where('id', '1')->first();
         
         $currentPassword = $request->input('current_password');
         $newPassword = $request->input('new_password');
