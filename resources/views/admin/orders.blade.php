@@ -52,7 +52,7 @@
                 <th>Customer</th>
                 <th>Action</th>
             </tr>
-
+        @if (count($orders) > 0)
             @foreach($orders as $order)
             <tr>
                 <td>#{{ $order['id_orders'] }}</td>
@@ -79,6 +79,7 @@
                 </td>
             </tr>
             @endforeach
+        @endif
         </table>
     </div>
 
