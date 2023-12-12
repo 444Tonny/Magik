@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
@@ -26,5 +27,25 @@ class Order extends Model
         'id_product',
         'color'
     ];
+
+    public static function getCurrentOrders($userID)
+    {
+        $orders = null;
+
+        if(session('google_id'))
+        {
+            $orders = Order::select(
+                'orders.*', 
+                'products.name_product',
+                'products.image_large'
+            )->join('products', 'orders.id_product', '=', 'products.id_product')
+            ->where('orders.id_user', '=', ''.$userID)
+            ->get();
+
+            return $orders;
+        }
+
+        return $orders;
+    }
 
 }

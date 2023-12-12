@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Color;
+use App\Models\Order;
+use Illuminate\Support\Facades\DB;
 
 
 class ProductController extends Controller
@@ -34,8 +37,10 @@ class ProductController extends Controller
             }
         }
 
+        $currentOrders = Order::getCurrentOrders(session('google_id'));
+
         // Retourner la vue avec les données
-        return view('client.index')->with('allProducts', $allProducts);
+        return view('client.index', compact('allProducts', 'currentOrders'));
     }
 
     public function getProductDetail(Request $request)
@@ -57,9 +62,11 @@ class ProductController extends Controller
             $colors = Color::whereIn('id_color', $productColor)->get();
         }
 
+        $currentOrders = Order::getCurrentOrders(session('google_id'));
+
         if ($product) {
             //echo($colors);
-            return view('client.product', compact('product', 'colors'));
+            return view('client.product', compact('product', 'colors', 'currentOrders'));
         } 
         /*else {
             // Redirigez ou affichez une page d'erreur si le produit n'est pas trouvé

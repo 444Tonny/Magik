@@ -158,7 +158,8 @@ h1 {
     font-size: 14px;
 }
 
-.gmailbtn
+.gmailbtn,
+.myorder
 {
     margin-top: 5px;
     margin-bottom: 15px;
@@ -169,12 +170,44 @@ h1 {
     padding-left: 18px;
     padding-right: 18px;
     height: 35px;
-    background-color: rgb(160, 39, 236);
     border: none;
     border-radius: 3px;
     color: white;
     font-size: 12px;
     font-weight: 600;
+}
+
+.gmailbtn
+{
+    background-color: rgb(160, 39, 236);
+}
+
+.myorder
+{
+    background: none !important;
+    border: 1.5px solid #a027ec;
+    color: #a027ec;
+}
+
+
+.myorder:hover,
+.myorder:active,
+.myorder:focus
+{
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1.5px solid rgb(130, 28, 193);
+    color: rgb(130, 28, 193);
+}
+
+
+.myorder:hover > svg,
+.myorder:active > svg,
+.myorder:focus > svg
+{
+    scale: 1.3;
+    transition: 0.2s;
+    fill: rgb(130, 28, 193) !important;
 }
 
 .gmailbtn:hover,
@@ -452,5 +485,176 @@ footer b {
 
     .bottom-footer div {
         margin-bottom: 20px;
+    }
+}
+
+
+
+/* Orders fenetre */
+
+.orders {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    min-width: 280px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index:11;
+}
+
+.orders-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.orders-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-line img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.order-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.order-details div {
+    margin-right: 10px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.order_name
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+.order_color
+{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.border-bottom
+{
+    padding-bottom: 15px !important;
+    border-bottom: 1.5px solid rgb(221, 221, 221) !important;
+}
+
+.close-btn {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #6525bf;
+    width: 110px;
+    height: 42px;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.close-btn:hover,
+.close-btn:focus,
+.close-btn:active {
+    cursor: pointer;
+    transition: 0.2s;
+    background: #47158d;
+}
+
+b.Pending,
+b.Canceled,
+b.Confirmed
+{
+    display: flex;
+    width: 75px;
+    font-size: 10px;
+    font-weight: 600;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 6px;
+    opacity: 0.8;
+    margin-left: auto;
+}
+
+b.Pending
+{
+    background-color: rgb(241, 141, 47);
+}
+b.Canceled
+{
+    background-color: rgb(220, 41, 68);
+}
+b.Confirmed
+{
+    background-color: rgb(109, 189, 69);
+}
+
+@media screen and (max-width: 640px) {
+
+    .orders
+    {
+        padding: 12px !important;
+    }
+
+    .order-line img {
+        width: 30px !important;
+        height: 30px !important;
+        margin-left: 0px !important;
+        margin-right: 2px !important;
+    }
+
+    .order_name
+    {
+        font-size: 11px;
+        margin-right: 10px !important;
+        width: 47% !important;
+    }
+
+    .order_color{
+        font-size: 10px;
+    }
+
+    b.Pending,
+    b.Canceled,
+    b.Confirmed
+    {
+        display: flex;
+        width: 70px;
+        font-size: 9px;
+        height: 30px;
     }
 }

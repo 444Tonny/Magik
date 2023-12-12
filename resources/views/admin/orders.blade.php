@@ -59,7 +59,7 @@
                 <td><img src="{{ asset($order->image_large) }}" alt="Image Produit 1" width='40' height='40'></td>
                 <td>{{ $order['name_product'] }}</td>
                 <td>{{ $order['color'] }}</td>
-                <td>{{ $order['status_order'] }}</td>
+                <td><b class="{{ $order['status_order'] }}">{{ $order['status_order'] }}<b></td>
                 <td> {{ date('Y-m-d', strtotime($order['date_orders'])) }} <br> {{ date('H:i', strtotime($order['date_orders'])) }} </td>
                 <td>{{ $order['name_order'] }}</td>
                 <td>

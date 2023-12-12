@@ -103,6 +103,47 @@
 
     </div>
 
+    <div class="orders" id="orders">
+        <div class="orders-content">
+            <div class="order-line border-bottom">
+                <div>Mis pedidos</div>
+            </div>
+            <!-- Example order lines -->
+            @if(session('google_id'))
+                @foreach($currentOrders as $order)
+                    <div class="order-line">
+                        <img src="{{ asset($order->image_large) }}" width='60' height='60' alt="Product Image">
+                        <div class="order-details">
+                            <div class="order_name" style='width:55%'>{{ $order->name_product }}</div>
+                            <div class="order_color" style='width:14%'>{{ $order->color }}</div>
+                            <div class="order_status" style='width:23%'><b class='{{ $order->status_order }}'>{{ $order->status_order }}</b></div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <p style='text-align:center;'>No tienes pedidos.</p>
+            @endif
+            <div class="order-line border-bottom" >
+            </div>
+            <!-- End of example order lines -->
+            <button class="close-btn" onclick="closeOrders()">Close</button>
+        </div>
+    </div>
+    <div class="orders-bg" id="orders-bg"></div>
+
+    <script>
+        // Commandes
+        function openOrders() {
+            document.getElementById('orders').style.display = 'block';
+            document.getElementById('orders-bg').style.display = 'block';
+        }
+
+        function closeOrders() {
+            document.getElementById('orders').style.display = 'none';
+            document.getElementById('orders-bg').style.display = 'none';
+        }
+    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var clickableProducts = document.querySelectorAll('.clickable');
@@ -138,7 +179,7 @@
                         });
                     } else {
                         // Si l'élément cible n'est pas trouvé, ouvrir l'autre page
-                        window.location.href = window.location.origin + '/FortniteShop/www.magiktienda.com/public/#' + targetId;
+                        window.location.href = window.location.origin + '/#' + targetId;
                     }
                 });
             });

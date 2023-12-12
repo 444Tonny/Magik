@@ -17,7 +17,9 @@ class OrderController extends Controller
 {
     public function indexRedeem(Request $request)
     {
-        return view('client.redeem');
+        $currentOrders = Order::getCurrentOrders(session('google_id'));
+
+        return view('client.redeem', compact('currentOrders'));
     }
 
     public function redeemPoints(Request $request)

@@ -64,8 +64,36 @@ td
 td
 {
     max-width: 90px !important;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
     overflow: hidden;
 }
 
+b.Pending,
+b.Canceled,
+b.Confirmed
+{
+    display: flex;
+    width: 75px;
+    font-size: 10px;
+    font-weight: 600;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+
+b.Pending
+{
+    background-color: rgb(241, 141, 47);
+}
+b.Canceled
+{
+    background-color: rgb(220, 41, 68);
+}
+b.Confirmed
+{
+    background-color: rgb(109, 189, 69);
+}

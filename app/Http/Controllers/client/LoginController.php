@@ -16,7 +16,7 @@ class LoginController extends Controller
     public function logout()
     {
         try {
-            Session::forget(['google_id', 'givenName', 'points']);
+            Session::forget(['google_id', 'givenName', 'points', 'google_email']);
 
             Auth::logout();
 
@@ -58,6 +58,8 @@ class LoginController extends Controller
         Session::put('givenName', $googleUser->user['given_name']);
         Session::put('points', $currentUser->points);
         Session::put('avatar', $googleUser->user['picture']);
+        dd($googleUser->getEmail());
+        Session::put('google_email', $googleUser->getEmail());
 
         Session::save();
 

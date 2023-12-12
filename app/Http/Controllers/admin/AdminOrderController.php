@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\admin\MagikUser;
 use Illuminate\Support\Facades\DB;
 
 class AdminOrderController extends Controller
@@ -38,11 +39,15 @@ class AdminOrderController extends Controller
             // Update 'status'
             $previousStatus = $order->status_order;
             $order->status_order = $request->input('status_order');
+            $customer = MagikUser::where('id', $order->id_user)->first();
 
             // Put product back in stock in case of cancel (unless it ws already canceled before)
             if($request->input('status_order') == 'Canceled' && $previousStatus != 'Canceled')
             {
                 $product->stock++;
+
+                // Return user points if it's canceled
+                $customer->points += $product->price;
             }
             // Remove product from stock in case of a pending/confirmed (unless it was not canceled before)
             else if($request->input('status_order') != 'Canceled' && $previousStatus == 'Canceled')
@@ -53,21 +58,21 @@ class AdminOrderController extends Controller
 
             $product->save();
             $order->save();
+            $customer->save();
 
             DB::commit(); 
 
-            return redirect()->back()->with('success', 'Order updated successfully.');
+            return redirect()->back()->with('success', 'Order updated successfully!');
         
         } catch (\Throwable $th) {
             DB::rollback();
-            return redirect()->back()->with('error', 'An error occured');
+            return redirect()->back()->with('error', 'Transaction canceled, an error occured.');
         }
     }
 
     public function destroy(Request $request)
     {
         try {
-            
             DB::beginTransaction();
 
             $id = $request->input('edited_order');
