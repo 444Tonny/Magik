@@ -62,6 +62,7 @@ class OrderController extends Controller
             {
                 $magikCode->is_used = 1;
                 $magikCode->date_redeem = now();
+                $magikCode->id_user_redeem = session('google_id');
 
                 $currentUser->points = $currentUser->points + $magikCode->points;
             }
@@ -79,7 +80,7 @@ class OrderController extends Controller
 
             //throw $th;
             DB::rollBack();
-            dd($th->getMessage());
+            //dd($th->getMessage());
 
             return redirect()->back()->with('error', 'An error occured');
         }
