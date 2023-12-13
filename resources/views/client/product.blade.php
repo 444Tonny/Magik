@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/client/home.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/client/product.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/client/button.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/client/modal.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/client/home.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/client/product.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/client/button.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/client/modal.css') }}?v=1">
     <title>Magik Tienda</title>
 </head>
 

@@ -658,3 +658,39 @@ b.Confirmed
         height: 30px;
     }
 }
+
+.author
+{
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11.5px;
+    color: white;
+    background-color: #482c84;
+}
+
+
+.author a
+{
+    font-family: 'Sora', sans-serif;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+.author a:hover,
+.author a:focus,
+.author a:active
+{
+    cursor: pointer;
+    transition: 0.3s;
+    color: white !important;
+}
+
+
+.author a u
+{
+    font-weight: 400;
+}
