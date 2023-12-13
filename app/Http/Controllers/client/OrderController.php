@@ -80,7 +80,7 @@ class OrderController extends Controller
 
             //throw $th;
             DB::rollBack();
-            dd($th->getMessage());
+            //dd($th->getMessage());
 
             return redirect()->back()->with('error', 'An error occured');
         }
