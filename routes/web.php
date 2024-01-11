@@ -41,7 +41,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/magikadmin', 'App\Http\Controllers\admin\LoginController@tryLogin')->name('tryLogin');
 
     /* Admin */
-    //Route::middleware(['auth'])->group(function () {
+    Route::middleware(['auth'])->group(function () {
         // ADMINS
         Route::get('/magikadmin/code', 'App\Http\Controllers\admin\CodeController@index')->name('codeGenerator');
         Route::post('/magikadmin/code', 'App\Http\Controllers\admin\CodeController@generateCode')->name('generateCode');
@@ -63,7 +63,7 @@ Route::group(['middleware' => 'web'], function () {
 
         // Logout
         Route::get('/magikadmin/logout', 'App\Http\Controllers\admin\LoginController@logout')->name('logout');
-    //});
+    });
 
     Route::fallback(function () {
         return redirect()->route('home'); 
