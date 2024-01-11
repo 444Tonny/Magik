@@ -1,0 +1,130 @@
+.commandModal {
+    overflow-y: auto;
+}
+
+#stocks-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 6%;
+    padding-right: 6%;
+    overflow-x: scroll;
+    font-family: 'Sora', sans-serif;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+form#stockForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.stockEditor
+{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 240px;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.stockEditor h4
+{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #2c2c2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stockEditor input[type="text"]
+{
+    width: 75px !important;
+    height: 35px !important;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(210, 210, 210);
+}
+
+.stockEditor button.sign
+{
+    width: 35px;
+    height: 33px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(75, 35, 161);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+
+.stockEditor button.sign:hover
+{
+    transition: 0.2s;
+    background-color: rgb(44, 19, 99);
+}
+
+.stockEditor .actual
+{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #2c2c2c;
+    font-weight: 100;
+}
+
+.update
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(110, 77, 182);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: 900px;
+    font-size: 14px;
+    height: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.2s;
+}
+
+
+.update:hover,
+.update:focus,
+.update:active
+{
+    transition: 0.2s;
+    background-color: rgb(76, 46, 141);
+}

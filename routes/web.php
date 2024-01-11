@@ -41,7 +41,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/magikadmin', 'App\Http\Controllers\admin\LoginController@tryLogin')->name('tryLogin');
 
     /* Admin */
-    Route::middleware(['auth'])->group(function () {
+    //Route::middleware(['auth'])->group(function () {
         // ADMINS
         Route::get('/magikadmin/code', 'App\Http\Controllers\admin\CodeController@index')->name('codeGenerator');
         Route::post('/magikadmin/code', 'App\Http\Controllers\admin\CodeController@generateCode')->name('generateCode');
@@ -52,15 +52,18 @@ Route::group(['middleware' => 'web'], function () {
 
         // Admin orders
         Route::get('/magikadmin/orders', 'App\Http\Controllers\admin\AdminOrderController@index')->name('orders');
-        
         // Mettre à jour une commande
         Route::post('/magikadmin/orders/update-order', 'App\Http\Controllers\admin\AdminOrderController@update')->name('updateOrder');
         // Supprimer une commande
         Route::post('/magikadmin/orders/delete-order', 'App\Http\Controllers\admin\AdminOrderController@destroy')->name('deleteOrder');
 
+        // Stocks
+        Route::get('/magikadmin/stocks', 'App\Http\Controllers\admin\StocksController@index')->name('stocks');
+        Route::post('/magikadmin/stocks', 'App\Http\Controllers\admin\StocksController@update')->name('updateStocks');
+
         // Logout
         Route::get('/magikadmin/logout', 'App\Http\Controllers\admin\LoginController@logout')->name('logout');
-    });
+    //});
 
     Route::fallback(function () {
         return redirect()->route('home'); 
